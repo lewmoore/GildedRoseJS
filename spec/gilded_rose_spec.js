@@ -1,4 +1,4 @@
-describe('Gilded Rose', function() {
+describe('Gilded Rose Regular Item', function() {
 	it('should decrease sellIn of a regular item by 1', function() {
 		const plainItem = new Shop([new Item('plainItem', 10, 10)]);
 		const item = plainItem.updateQuality();

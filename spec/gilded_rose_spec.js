@@ -10,6 +10,12 @@ describe('Gilded Rose Regular Item', function() {
 		const item = plainItem.updateQuality();
 		expect(item[0].quality).toEqual(9);
 	});
+
+	it('minimum quality is 0', function() {
+		const plainItem = new Shop([new Item('plainItem', 10, 0)]);
+		const item = plainItem.updateQuality();
+		expect(item[0].quality).toEqual(0);
+	});
 });
 
 describe('Gilded Rose Aged Brie', function() {

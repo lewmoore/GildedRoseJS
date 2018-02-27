@@ -11,3 +11,11 @@ describe('Gilded Rose Regular Item', function() {
 		expect(item[0].quality).toEqual(9);
 	});
 });
+
+describe('Gilded Rose Aged Brie', function() {
+	it('should increase quality of Aged Brie by 1', function() {
+		const agedBrie = new Shop([new Item('Aged Brie', 10, 10)]);
+		const item = agedBrie.updateQuality();
+		expect(item[0].quality).toEqual(11);
+	});
+});

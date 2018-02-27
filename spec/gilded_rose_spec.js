@@ -19,3 +19,17 @@ describe('Gilded Rose Aged Brie', function() {
 		expect(item[0].quality).toEqual(11);
 	});
 });
+
+describe('Gilded Rose Sulfuras', function() {
+	it('shouldnt change quality', function() {
+		const sulfuras = new Shop([new Item('Sulfuras, Hand of Ragnaros', 10, 10)]);
+		const item = sulfuras.updateQuality();
+		expect(item[0].quality).toEqual(10);
+	});
+
+	it('shouldnt change sellIn', function() {
+		const sulfuras = new Shop([new Item('Sulfuras, Hand of Ragnaros', 10, 10)]);
+		const item = sulfuras.updateQuality();
+		expect(item[0].sellIn).toEqual(10);
+	});
+});

@@ -18,6 +18,12 @@ describe('Gilded Rose Aged Brie', function() {
 		const item = agedBrie.updateQuality();
 		expect(item[0].quality).toEqual(11);
 	});
+
+	it('maximum quality is 50', function() {
+		const agedBrie = new Shop([new Item('Aged Brie', 10, 50)]);
+		const item = agedBrie.updateQuality();
+		expect(item[0].quality).toEqual(50);
+	});
 });
 
 describe('Gilded Rose Sulfuras', function() {

@@ -25,9 +25,14 @@ class Shop {
 		item.quality += 1;
 	}
 
+	decreaseSellIn(item) {
+		item.sellIn -= 1;
+	}
+
 	updateItem(item) {
 		if (item.name == 'Aged Brie') {
 			this.increaseQuality(item);
+			this.decreaseSellIn(item);
 		}
 	}
 }

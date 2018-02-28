@@ -15,4 +15,9 @@ describe('Item is Aged Brie', function() {
 		shop.updateQuality(items);
 		expect(items[0].quality).toEqual(11);
 	});
+
+	it('Should decrease SellIn by 1', function() {
+		shop.updateItem(items);
+		expect(items[0].sellIn).toEqual(9);
+	});
 });
